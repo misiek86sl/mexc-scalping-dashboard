@@ -1,0 +1,5 @@
+ccxt
+numpy
+ta-lib
+python-telegram-bot
+Flask
