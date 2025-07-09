@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Scalping Bota</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>📈 Dashboard Scalping Bota</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Para</th>
+        <th>Strona</th>
+        <th>Ilość</th>
+        <th>Dźwignia</th>
+        <th>Czas</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for trade in trades %}
+      <tr>
+        <td>{{ trade.pair }}</td>
+        <td>{{ trade.side }}</td>
+        <td>{{ trade.amount }} USD</td>
+        <td>{{ trade.leverage }}</td>
+        <td>{{ trade.timestamp.strftime('%H:%M:%S') }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
